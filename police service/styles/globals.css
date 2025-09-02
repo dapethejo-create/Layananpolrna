@@ -1,0 +1,77 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font & background umum */
+body {
+  font-family: Arial, sans-serif;
+  background: url('/arivena.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff; /* biar kontras dengan overlay gelap */
+  line-height: 1.6;
+  position: relative;
+  z-index: 0;
+}
+
+/* Overlay hitam transparan */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* bisa diatur tingkat transparansi */
+  z-index: -1; /* supaya ada di belakang teks */
+}
+
+/* Judul umum */
+h1, h2, h3, h4 {
+  font-weight: bold;
+  color: #222;
+}
+
+/* Input & Select */
+input, select, textarea {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #3b82f6; /* biru */
+}
+
+/* Tombol */
+button {
+  background: #3b82f6;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+  background: #2563eb; /* biru lebih gelap */
+}
+
+button.danger {
+  background: #ef4444;
+}
+button.danger:hover {
+  background: #dc2626;
+}
+
+/* Container umum */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
